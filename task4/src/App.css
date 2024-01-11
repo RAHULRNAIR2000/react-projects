@@ -1,0 +1,86 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi?styles=135002,135000');
+.section {
+  background-color: black;
+  color: #ffffff;
+  min-height: 90.25vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif!important;
+  /* z-index: -1;  */
+ }
+ .card {
+  font-weight: 800;
+  font-size: 20px;
+                                                
+  position: absolute;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  width: 30%;
+  height: auto;
+  z-index: 1;
+ }
+ 
+ .card-body {
+  background-color: rgb(0, 0, 0);
+ }
+ 
+ .card-title {
+  color: rgb(255, 255, 255);
+ }
+ 
+ .card-text {
+  color: rgb(255, 246, 246);
+  font-family: "Rubik", sans-serif!important;
+
+ }
+ button{
+
+  z-index: 2;
+ }
+ .navbar {
+
+    font-family: "Rubik", sans-serif!important;
+    font-weight: 600;
+    font-size: 20px;
+
+   }
+   /* Styling for input fields */
+input[type="text"],
+input[type="number"] {
+ width: 100%;
+ height: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ box-sizing: border-box;
+}
+
+/* Centering the div with form */
+.form {
+ margin: 0 auto;
+ width: 500px;
+ height: 500px;
+ padding: 100px;
+ border: 1px solid white;
+ border-radius: 5px;
+ text-align: left;
+}
+input.wide-input {
+  width: 300px;
+  height: 40px;
+}
+input.wide-input1 {
+  width: 300px;
+  height: 80px;
+}
+
+
+.center1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,40 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi?styles=135002,135000');
+.section {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* z-index: -1;  */
+ }
+ .card {
+  font-weight: 800;
+  font-size: 50px;
+                                                
+  position: absolute;
+  border: 1px solid white;
+  color: rgb(0, 0, 0);
+  width: 30%;
+  height: auto;
+  z-index: 1;
+ }
+ 
+ .card-body {
+  background-color: white;
+ }
+ 
+ .card-title {
+  color: rgb(0, 0, 0);
+ }
+ 
+ .card-text {
+  color: rgb(0, 0, 0);
+  font-family: 'Satoshi', sans-serif !important;
+
+ }
+ button{
+
+  z-index: 2;
+ }

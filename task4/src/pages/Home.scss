@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+// @import '~node-sass/base';
+
+
+.section {
+   margin: 0 auto;
+   padding: 0rem 0 1rem;
+}
+.section1{
+   font-family: inherit;
+   font-size: clamp(2rem, 3vw, 3rem);
+   font-weight: 700;
+   line-height: 1.15;
+   justify-content: center;
+   
+}
+
+.container {
+   max-width: 75rem;
+   height: auto;
+   margin: 0 auto;
+   padding: 0 1.25rem;
+}
+
+.centered {
+   text-align: center;
+   vertical-align: middle;
+   margin-bottom: 1rem;
+}
+
+.heading {
+   &-xl {
+      font-family: inherit;
+      font-size: clamp(2.648rem, 6vw, 4.241rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -1px;
+   }
+
+   &-lg {
+      font-family: inherit;
+      font-size: clamp(2.179rem, 5vw, 3.176rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -1px;
+   }
+
+   &-md {
+      font-family: inherit;
+      font-size: clamp(1.794rem, 4vw, 2.379rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -1px;
+   }
+
+   &-sm {
+      font-family: inherit;
+      font-size: clamp(1.476rem, 3vw, 1.782rem);
+      font-weight: 600;
+      line-height: 1.5;
+   }
+
+   &-xs {
+      font-family: inherit;
+      font-size: clamp(1.215rem, 2vw, 1.335rem);
+      font-weight: 500;
+      line-height: 1.5;
+   }
+}
+
+.paragraph {
+   font-family: inherit;
+   font-size: clamp(1rem, 2vw, 1.125rem);
+   text-wrap: balance;
+   color: var(--color-white-200);
+}
+
+.btn {
+   display: inline-block;
+   font-family: inherit;
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: 1.5;
+   text-align: center;
+   vertical-align: middle;
+//    white-space: nowrap;
+   user-select: none;
+   outline: white;
+   border: 2px solid white;
+   border-radius: 1rem;
+   text-transform: unset;
+   transition: all 0.3s ease-in-out;
+
+   &-inline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.5rem;
+      margin-top: 30px;
+   }
+
+   &-darken {
+      padding: 0.75rem 2rem;
+      color: var(--color-white-100);
+      background-color: var(--color-black-200);
+      box-shadow: var(--shadow-medium);
+   }
+
+   &-neutral {
+      padding: 0.75rem 2rem;
+      color: var(--color-black-500);
+      background-color: var(--color-white-100);
+      box-shadow: var(--shadow-medium);
+   }
+}
+
+// Header Section
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+   transition: all 0.35s ease;
+
+   &.on-scroll {
+      background: var(--color-black-300);
+      box-shadow: var(--shadow-medium);
+   }
+}
+
+
+// Banner Section
+.banner {
+   &-column {
+      position: relative;
+      display: grid;
+      align-items: center;
+      row-gap: 3rem;
+
+      // Media Query Breakpoint
+      @media only screen and (min-width: 48rem) {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+         justify-content: center;
+      }
+
+      @media only screen and (min-width: 64rem) {
+         grid-template-columns: 1fr max-content;
+         column-gap: 4rem;
+         margin-top: 3rem;
+      }
+   }
+
+   &-image {
+      display: block;
+      max-width: 18rem;
+      height: auto;
+      margin-top: 2rem;
+      object-fit: cover;
+      justify-self: center;
+
+      // Media Query Breakpoint
+      @media only screen and (min-width: 48rem) {
+         order: 1;
+         max-width: 20rem;
+         height: auto;
+      }
+
+      @media only screen and (min-width: 64rem) {
+         max-width: 25rem;
+         height: auto;
+         margin-right: 5rem;
+      }
+   }
+
+   &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 1.75rem;
+   }
+
+   &-links {
+      position: absolute;
+      top: 30%;
+      right: 1.5rem;
+      display: grid;
+      justify-items: center;
+      row-gap: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+
+      // Media Query Breakpoint
+      @media only screen and (min-width: 64rem) {
+         opacity: 1;
+         visibility: visible;
+      }
+
+      & > * {
+         font-size: 1.25rem;
+         line-height: 1.25;
+         color: var(--color-white-100);
+      }
+
+      &::before {
+         position: absolute;
+         content: "";
+         top: -3rem;
+         width: 4rem;
+         height: 1.5px;
+         transform: rotate(90deg);
+         background: var(--color-white-100);
+      }
+
+      &::after {
+         position: absolute;
+         content: "";
+         bottom: -3rem;
+         width: 4rem;
+         height: 2px;
+         transform: rotate(90deg);
+         background: var(--color-white-100);
+      }
+   }
+}
